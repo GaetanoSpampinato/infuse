@@ -391,9 +391,8 @@
     <section id="contact">
       <div id="contactInfo">
         <article class="infoContain">
-          <div class="infoLogoContainer">
-            <i class="fas fa-map-marker-alt icons"></i>
-          </div>
+          <i class="fas fa-map-marker-alt icons kader"></i>
+
           <div>
             <h3>Address</h3>
             <p>
@@ -408,20 +407,65 @@
         </article>
 
         <article class="infoContain">
-          <h3>Email</h3>
-          <p>
-            <a href="mailto:gaetano.spampinato94@gmail.com"
-              >gaetano.spampinato94@gmail.com</a
-            >
-          </p>
+          <i class="fas fa-map-marker-alt icons kader"></i>
+          <div>
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:gaetano.spampinato94@gmail.com"
+                >gaetano.spampinato94@gmail.com</a
+              >
+            </p>
+          </div>
         </article>
 
         <article class="infoContain">
-          <h3>Phone</h3>
-          <p>
-            <a href="tel:+32470727844">+32 470 72 78 44</a>
-          </p>
+          <i class="fas fa-phone icons kader"></i>
+          <div>
+            <h3>Phone</h3>
+            <p>
+              <a href="tel:+32470727844">+32 470 72 78 44</a>
+            </p>
+          </div>
         </article>
+      </div>
+      <div id="formContainer">
+        <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
+          <input
+            id="Voornaam"
+            name="Voornaam"
+            type="text"
+            class="inputLayout"
+            placeholder="First Name"
+            required
+          />
+          <br />
+          <input
+            id="Achternaam"
+            name="Achternaam"
+            type="text"
+            class="inputLayout"
+            placeholder="Last Name"
+            required
+          />
+          <br />
+          <input
+            id="mail"
+            name="mail"
+            type="email"
+            class="inputLayout"
+            placeholder="Your Email"
+            required
+          />
+          <br />
+          <textarea
+            class="inputLayout"
+            name="beschrijving"
+            id="beschrijving"
+            cols="30"
+            rows="6"
+            required
+          ></textarea>
+        </form>
       </div>
     </section>
   </body>

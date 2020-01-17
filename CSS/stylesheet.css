@@ -419,11 +419,11 @@ footer p:hover {
 
 .infoContain {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row wrap-reverse;
   padding-top: 15px;
   background-color: #24252a;
   min-height: 50px;
-  max-width: 400px;
+  max-width: 420px;
   margin-bottom: 10px;
   padding: 20px;
   border-radius: 4px;
@@ -435,13 +435,33 @@ footer p:hover {
   width: 100%;
 }
 
-.infoLogoContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.kader {
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  padding-top: 25px;
+  border: 2px solid orangered;
+  border-radius: 50%;
+  margin-right: 20px;
 }
 
-/*#endregion Contact */
+#formContainer {
+  width: 800px;
+}
+
+form {
+  min-width: 250px;
+  max-width: 800px;
+}
+
+.inputLayout {
+  border: 1px solid darkgray;
+  background: transparent;
+  margin: 15px;
+  width: 100%;
+}
+
+/*#endregion Ccontact */
 
 /*#region Animations */
 .fadeIn {
