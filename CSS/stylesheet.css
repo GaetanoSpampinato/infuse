@@ -7,7 +7,7 @@ body {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 50px 800px auto auto auto auto auto 95px;
-  grid-template-areas: "navigatie" "home" "about" "whatIDo" "experiences" "skills" "inhoud" "footer";
+  grid-template-areas: "navigatie" "home" "about" "whatIDo" "experiences" "skills" "contact" "footer";
   margin: 0;
   height: 100vh;
 }
@@ -17,12 +17,35 @@ body {
   color: orangered;
 }
 
+/*#region Socialmedia*/
+.socialMedia li {
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+}
+
+.socialMedia li:hover {
+  color: black;
+  background-color: orangered;
+}
+
+.big {
+  font-size: 30px;
+}
+
+.big:hover {
+  color: black;
+}
+
+/*#endregion Socialmedia*/
+
 /*#region Navigatie */
 header {
   grid-area: navigatie;
   background-color: #24252a;
   position: fixed;
   width: 100%;
+  z-index: 1000;
 }
 
 li,
@@ -198,6 +221,7 @@ h3 {
   text-align: center;
   height: 50px;
 }
+
 .contain {
   padding-top: 15px;
   background-color: #24252a;
@@ -260,6 +284,87 @@ h3 {
 /*#region Skills*/
 #skills {
   grid-area: skills;
+  background-color: #100e17;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0% 3% 8% 3%;
+}
+
+.skillContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 200px;
+  width: 200px;
+}
+
+.skillTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.circleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percent {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #000;
+}
+
+#SCCM circle:nth-child(2) {
+  stroke-dasharray: 316;
+}
+
+#CCNA circle:nth-child(2) {
+  stroke-dasharray: 431;
+}
+
+#O365 circle:nth-child(2) {
+  stroke-dasharray: 330;
+}
+
+#powershell circle:nth-child(2) {
+  stroke-dasharray: 264;
+}
+
+#csharp circle:nth-child(2) {
+  stroke-dasharray: 400;
+}
+
+#javascript circle:nth-child(2) {
+  stroke-dasharray: 431;
+}
+
+#html circle:nth-child(2) {
+  stroke-dasharray: 440;
+}
+
+#css circle:nth-child(2) {
+  stroke-dasharray: 440;
+}
+
+.percent:nth-child(1) svg circle:nth-child(2) {
+  stroke: orangered;
+}
+
+svg {
+  width: 150px;
+}
+
+svg circle {
+  fill: none;
+  stroke: #191919;
+  stroke-width: 5;
+  transform: translate(5px, 5px);
 }
 
 /*#endregion Skills*/
@@ -292,9 +397,70 @@ footer p:hover {
 
 /*#endregion Footer */
 
-.style {
-  visibility: visible;
-  animation-duration: 0.8s;
-  animation-delay: 0.5s;
-  animation-name: fadeInUp;
+/*#region Contact */
+#contact {
+  grid-area: contact;
+  min-height: 400px;
+  background-color: #100e17;
+  background-image: url("../img/map-color-overlay.png");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3%;
 }
+
+#contactInfo {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.infoContain {
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 15px;
+  background-color: #24252a;
+  min-height: 50px;
+  max-width: 400px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: -1rem 0 3rem #000;
+}
+
+.infoContain h3 {
+  width: 100%;
+}
+
+.infoLogoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*#endregion Contact */
+
+/*#region Animations */
+.fadeIn {
+  animation: fadeIn 0.7s;
+}
+
+.slideUp {
+  animation: slideUp 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*#endregion Animations*/
