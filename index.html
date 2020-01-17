@@ -14,14 +14,28 @@
   </head>
 
   <header>
-    <nav>
+    <!--<nav>
       <ul class="nav_links">
-        <li><a class="#" href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Experiences</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#background">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+    </nav>-->
+    <nav class="navbar">
+      <div class="dropdown">
+        <button class="dropbtn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#background">Home</a>
+          <a href="#about">About</a>
+          <a href="#experiences">Experiences</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -116,7 +130,11 @@
           <li><span>CSS3</span></li>
         </ul>
         <div id="cvButton">
-          <a href="#">Download CV <i class="fas fa-download"></i></a>
+          <a
+            href="./Doc/Curriculum_Vitae - Gaetano Spampinato.pdf"
+            target="_Blank"
+            >Download CV <i class="fas fa-download"></i
+          ></a>
         </div>
       </div>
     </section>
@@ -195,7 +213,7 @@
           </article>
           <article class="expContain">
             <h3>
-              CCNA Routing & Switching At
+              CCNA Routing & Switching @
               <span class="textColor">Howest Brugge</span>
             </h3>
             <p class="textColor"><sub>2018</sub></p>
@@ -389,7 +407,7 @@
     </section>
 
     <section id="contact">
-      <div id="contactInfo">
+      <div class="fadeIn" id="contactInfo">
         <article class="infoContain">
           <i class="fas fa-map-marker-alt icons kader"></i>
 
@@ -407,7 +425,7 @@
         </article>
 
         <article class="infoContain">
-          <i class="fas fa-map-marker-alt icons kader"></i>
+          <i class="fas fa-envelope icons kader"></i>
           <div>
             <h3>Email</h3>
             <p>
@@ -428,7 +446,7 @@
           </div>
         </article>
       </div>
-      <div id="formContainer">
+      <div class="fadeIn" id="formContainer">
         <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
           <input
             id="Voornaam"
@@ -463,8 +481,10 @@
             id="beschrijving"
             cols="30"
             rows="6"
+            placeholder="Your Message"
             required
           ></textarea>
+          <input class="btnSubmit inputLayout" type="submit" />
         </form>
       </div>
     </section>

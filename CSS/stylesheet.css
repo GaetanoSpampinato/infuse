@@ -40,13 +40,21 @@ body {
 /*#endregion Socialmedia*/
 
 /*#region Navigatie */
-header {
-  grid-area: navigatie;
-  background-color: #24252a;
+.navbar {
+  padding: 20px;
   position: fixed;
   width: 100%;
   z-index: 1000;
 }
+
+/*.navbar a {
+  float: left;
+  font-size: 16px;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}*/
 
 li,
 a {
@@ -56,30 +64,49 @@ a {
   text-decoration: none;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-.nav_links {
-  list-style: none;
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: whitesmoke;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
 
-.nav_links li {
-  display: inline-block;
-  padding: 0px 20px;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #24252a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-.nav_links li a {
-  transition: all 0.3s ease 0s;
+.dropdown-content a {
+  float: none;
+  color: whitesmoke;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
-.nav_links li a:hover {
-  color: orangered;
+.dropdown-content a:hover {
+  background-color: rgba(255, 68, 0, 0.795);
 }
 
-.huidigePagina {
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn:hover {
   color: orangered;
 }
 
@@ -87,6 +114,7 @@ header {
 
 /*#region Home */
 #background {
+  margin-top: -50px;
   grid-area: home;
   background-color: #100e17;
   background-image: url("../img/home-bg-img.jpg");
@@ -99,8 +127,8 @@ header {
   background-color: rgb(0, 0, 0, 0.9);
   display: flex;
   flex-wrap: wrap-reverse;
-  min-height: 800px;
-  max-height: 800px;
+  min-height: 850px;
+  max-height: 850px;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -400,7 +428,6 @@ footer p:hover {
 /*#region Contact */
 #contact {
   grid-area: contact;
-  min-height: 400px;
   background-color: #100e17;
   background-image: url("../img/map-color-overlay.png");
   background-size: cover;
@@ -409,7 +436,8 @@ footer p:hover {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  padding: 3%;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 #contactInfo {
@@ -446,7 +474,8 @@ footer p:hover {
 }
 
 #formContainer {
-  width: 800px;
+  max-width: 800px;
+  width: 100%;
 }
 
 form {
@@ -458,7 +487,21 @@ form {
   border: 1px solid darkgray;
   background: transparent;
   margin: 15px;
-  width: 100%;
+  color: whitesmoke;
+  height: 50px;
+  width: 90%;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+#beschrijving {
+  height: 150px;
+}
+
+.btnSubmit {
+  background-color: rgba(255, 68, 0, 0.575);
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 /*#endregion Ccontact */
